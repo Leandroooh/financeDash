@@ -51,12 +51,10 @@ const getDate = () => {
     return `${day}/${month}/${year}`;
 }
 
-const incomeBtn = document.getElementById('income-btn')
-
 const submitIncome = async () => { 
 	
 	const incomeAmount = document.getElementById('income-amount');
-	const incomeDesc = document.getElementById('income.description');
+	const incomeDesc = document.getElementById('income-description');
 	const incomeMetod = document.getElementById('income-metod');
 
 	const data = {
@@ -74,6 +72,15 @@ const submitIncome = async () => {
 
 		body: JSON.stringify(data)
 	});
+
+	const savedData = await response.json()
+	
+	incomeAmount.value = ''
+	incomeMetod.value = ''
+	incomeDesc.value = ''
+
+	renderHistory(savedData)
+	console.log(savedData)
 
 } 
 
