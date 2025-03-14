@@ -85,7 +85,7 @@ const submitIncome = async () => {
 } 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const incomeBtn = document.getElementById("income-btn"); // ou outro seletor apropriado
+    const incomeBtn = document.getElementById("income-btn");
     if (incomeBtn) {
         incomeBtn.addEventListener('click', (ev) => {
             ev.preventDefault();
