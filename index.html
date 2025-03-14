@@ -14,7 +14,7 @@
 
 <body>
 
-    <header class="dashboard-header ">
+    <header class="dashboard-header">
         <section class="balance-summary flex">
             <article class="balance details-card">
                 <p>Saldo</p>
@@ -76,85 +76,10 @@
                     <th></th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>Orlando Rodrigues</td>
-                    <td>Bank account</td>
-                    <td>2024/04/01</td>
-                    <td>+$750.00</td>
-                    <td>
-                        <button class="options-button">
-                            <img src="./src/icons/settings.svg" alt="Options">
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Netflix</td>
-                    <td>Credit card</td>
-                    <td>2024/03/29</td>
-                    <td>-$9.90</td>
-                    <td>
-                        <button class="options-button">
-                            <img src="./src/icons/settings.svg" alt="Options">
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Spotify</td>
-                    <td>Credit card</td>
-                    <td>2024/03/29</td>
-                    <td>-$19.90</td>
-                    <td>
-                        <button class="options-button">
-                            <img src="./src/icons/settings.svg" alt="Options">
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Carl Andrew</td>
-                    <td>Bank account</td>
-                    <td>2024/03/27</td>
-                    <td>+$400.00</td>
-                    <td>
-                        <button class="options-button">
-                            <img src="./src/icons/settings.svg" alt="Options">
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Carrefour Market</td>
-                    <td>Credit card</td>
-                    <td>2024/03/26</td>
-                    <td>-$64.33</td>
-                    <td>
-                        <button class="options-button">
-                            <img src="./src/icons/settings.svg" alt="Options">
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Amazon</td>
-                    <td>Credit card</td>
-                    <td>2024/03/24</td>
-                    <td>-$147.90</td>
-                    <td>
-                        <button class="options-button">
-                            <img src="./src/icons/settings.svg" alt="Options">
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Shopify</td>
-                    <td>Credit card</td>
-                    <td>2024/03/21</td>
-                    <td>-$57.98</td>
-                    <td>
-                        <button class="options-button">
-                            <img src="./src/icons/settings.svg" alt="Options">
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
+
+            <!-- Histórico-->
+            <tbody id="table-body"></tbody>
+
         </table>
     </main>
 
@@ -167,7 +92,8 @@
         <div class="modal__overlay" tabindex="-1" data-micromodal-close>
             <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-login-title">
                 <!-- Botão de fechar -->
-                <button class="modal__close" aria-label="Fechar modal" data-micromodal-close>&times;</button>
+                <button type="button" class="modal__close" aria-label="Fechar modal"
+                    data-micromodal-close>&times;</button>
 
                 <!-- Conteúdo do modal -->
                 <header class="modal__header">
@@ -200,8 +126,9 @@
                 </main>
 
                 <footer class="modal__footer">
-                    <button class="modal__btn modal__btn--primary">Investir</button>
-                    <button class="modal__btn modal__btn--secondary" data-micromodal-close>Cancelar</button>
+                    <button type="button" class="modal__btn modal__btn--primary">Investir</button>
+                    <button type="button" class="modal__btn modal__btn--secondary"
+                        data-micromodal-close>Cancelar</button>
                 </footer>
 
             </div>
@@ -213,7 +140,8 @@
         <div class="modal__overlay" tabindex="-1" data-micromodal-close>
             <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-login-title">
                 <!-- Botão de fechar -->
-                <button class="modal__close" aria-label="Fechar modal" data-micromodal-close>&times;</button>
+                <button type="button" class="modal__close" aria-label="Fechar modal"
+                    data-micromodal-close>&times;</button>
 
                 <!-- Conteúdo do modal -->
                 <header class="modal__header">
@@ -246,8 +174,9 @@
                 </main>
 
                 <footer class="modal__footer">
-                    <button class="modal__btn modal__btn--primary">Concluir</button>
-                    <button class="modal__btn modal__btn--secondary" data-micromodal-close>Cancelar</button>
+                    <button type="button" class="modal__btn modal__btn--primary">Concluir</button>
+                    <button type="button" class="modal__btn modal__btn--secondary"
+                        data-micromodal-close>Cancelar</button>
                 </footer>
 
             </div>
@@ -259,7 +188,8 @@
         <div class="modal__overlay" tabindex="-1" data-micromodal-close>
             <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-login-title">
                 <!-- Botão de fechar -->
-                <button class="modal__close" aria-label="Fechar modal" data-micromodal-close>&times;</button>
+                <button type="button" class="modal__close" aria-label="Fechar modal"
+                    data-micromodal-close>&times;</button>
 
                 <!-- Conteúdo do modal -->
                 <header class="modal__header">
@@ -292,8 +222,9 @@
                 </main>
 
                 <footer class="modal__footer">
-                    <button class="modal__btn modal__btn--primary">Concluir</button>
-                    <button class="modal__btn modal__btn--secondary" data-micromodal-close>Cancelar</button>
+                    <button type="button" class="modal__btn modal__btn--primary">Concluir</button>
+                    <button type="button" class="modal__btn modal__btn--secondary"
+                        data-micromodal-close>Cancelar</button>
                 </footer>
 
             </div>

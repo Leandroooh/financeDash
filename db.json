@@ -3,14 +3,15 @@
 		{
 			"id": "1",
 			"date": "01/12/2024",
-			"value": 69,
+			"amount": "R$ 69,00",
 			"metod": "Cartão de Crédito",
 			"description": "Conta de Energia"
 		},
 		{
 			"id": "2",
 			"date": "01/12/2024",
-			"value": 132,
+			"amount": "R$ 132,00",
+			"metod": "Pix",
 			"description": "Conta de Água"
 		}
 	]
