@@ -1,0 +1,17 @@
+{
+	"transactions": [
+		{
+			"id": "1",
+			"date": "01/12/2024",
+			"value": 69,
+			"metod": "Cartão de Crédito",
+			"description": "Conta de Energia"
+		},
+		{
+			"id": "2",
+			"date": "01/12/2024",
+			"value": 132,
+			"description": "Conta de Água"
+		}
+	]
+}

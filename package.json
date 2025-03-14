@@ -1,0 +1,16 @@
+{
+	"name": "financedash",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"json-server": "npx --watch -d json-server db.json "
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"json-server": "^1.0.0-beta.3",
+		"micromodal": "^0.4.10"
+	}
+}

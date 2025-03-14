@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Finanças</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+    <script type="module" src="./index.js" defer></script>
+
+</head>
+
+<body>
+
+    <header class="dashboard-header ">
+        <section class="balance-summary flex">
+            <article class="balance details-card">
+                <p>Saldo</p>
+                <h2 class="balance-amount">R$ 5,502.45</h2>
+            </article>
+
+            <article class="income details-card">
+                <p>Investimentos</p>
+                <h2 class="income-amount">R$ 9,450.00</h2>
+            </article>
+
+            <article class="expenses details-card">
+                <p>Despesas</p>
+                <h2 class="expenses-amount">R$ 3,945.55</h2>
+            </article>
+        </section>
+    </header>
+
+    <aside class="controls">
+        <div class="action-cards" data-micromodal-trigger="modal-income">
+            <img src="./src/icons/income.svg" alt="">
+            <div class="cards-text">
+                <button type="button" class="add-income">Investir</button>
+                <p>Adicione seus fundos para investimento!</p>
+            </div>
+        </div>
+
+        <div class="action-cards" id='btn' data-micromodal-trigger="modal-expense">
+            <img src="./src/icons/expense.svg" alt="">
+            <div class="cards-text">
+                <button type="button" class="add-expense">Despesas</button>
+                <p>Pague suas despesas de forma prática!</p>
+            </div>
+        </div>
+
+        <div class="action-cards">
+            <img src="./src/icons/transfer.svg" alt="" data-micromodal-trigger="modal-transfer">
+            <div class="cards-text">
+                <button type="button" class="transfer-money">Transferir</button>
+                <p>Realize transferências para outras pessoas!</p>
+            </div>
+        </div>
+
+    </aside>
+
+    <main class="transactions-container">
+        <header class="transactions-header">
+            <h2>Ultimas Transações</h2>
+            <p>Verifique suas ultimas movimentações</p>
+        </header>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Método</th>
+                    <th>Data</th>
+                    <th>Valor</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Orlando Rodrigues</td>
+                    <td>Bank account</td>
+                    <td>2024/04/01</td>
+                    <td>+$750.00</td>
+                    <td>
+                        <button class="options-button">
+                            <img src="./src/icons/settings.svg" alt="Options">
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Netflix</td>
+                    <td>Credit card</td>
+                    <td>2024/03/29</td>
+                    <td>-$9.90</td>
+                    <td>
+                        <button class="options-button">
+                            <img src="./src/icons/settings.svg" alt="Options">
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Spotify</td>
+                    <td>Credit card</td>
+                    <td>2024/03/29</td>
+                    <td>-$19.90</td>
+                    <td>
+                        <button class="options-button">
+                            <img src="./src/icons/settings.svg" alt="Options">
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Carl Andrew</td>
+                    <td>Bank account</td>
+                    <td>2024/03/27</td>
+                    <td>+$400.00</td>
+                    <td>
+                        <button class="options-button">
+                            <img src="./src/icons/settings.svg" alt="Options">
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Carrefour Market</td>
+                    <td>Credit card</td>
+                    <td>2024/03/26</td>
+                    <td>-$64.33</td>
+                    <td>
+                        <button class="options-button">
+                            <img src="./src/icons/settings.svg" alt="Options">
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Amazon</td>
+                    <td>Credit card</td>
+                    <td>2024/03/24</td>
+                    <td>-$147.90</td>
+                    <td>
+                        <button class="options-button">
+                            <img src="./src/icons/settings.svg" alt="Options">
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Shopify</td>
+                    <td>Credit card</td>
+                    <td>2024/03/21</td>
+                    <td>-$57.98</td>
+                    <td>
+                        <button class="options-button">
+                            <img src="./src/icons/settings.svg" alt="Options">
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Controle de Finanças. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Modal Income -->
+    <div class="modal micromodal-slide" id="modal-income" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-login-title">
+                <!-- Botão de fechar -->
+                <button class="modal__close" aria-label="Fechar modal" data-micromodal-close>&times;</button>
+
+                <!-- Conteúdo do modal -->
+                <header class="modal__header">
+                    <img src="./src/icons/income.svg" alt="income icon">
+                    <h2 class="modal__title" id="modal-login-title">Investimento</h2>
+                </header>
+
+                <main class="modal__content">
+                    <div class="metod__container">
+                        <label for="income-metod">Pagamento</label>
+                        <select id="income-metod" class="modal__input">
+                            <option value="pix">Pix</option>
+                            <option value="cripto">Cripto moedas</option>
+                            <option value="debito">Cartão de Débito</option>
+                            <option value="credito">Cartão de Crédito</option>
+                            <option value="default" selected>Selecione</option>
+                        </select>
+                    </div>
+
+                    <div class="value__container">
+                        <label for="income-value">Valor</label>
+                        <input type="income-value" id="income-value" class="modal__input" required />
+                        <p class="modal__info"></p>
+                    </div>
+                    <div class="description__container">
+                        <label for="income-description">Descrição</label>
+                        <input type="income-description" id="income-description" class="modal__input" required />
+                        <p class="modal__info"></p>
+                    </div>
+                </main>
+
+                <footer class="modal__footer">
+                    <button class="modal__btn modal__btn--primary">Investir</button>
+                    <button class="modal__btn modal__btn--secondary" data-micromodal-close>Cancelar</button>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Expense -->
+    <div class="modal micromodal-slide" id="modal-expense" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-login-title">
+                <!-- Botão de fechar -->
+                <button class="modal__close" aria-label="Fechar modal" data-micromodal-close>&times;</button>
+
+                <!-- Conteúdo do modal -->
+                <header class="modal__header">
+                    <img src="./src/icons/expense.svg" alt="expense icon">
+                    <h2 class="modal__title" id="modal-login-title">Despesas</h2>
+                </header>
+
+                <main class="modal__content">
+                    <div class="metod__container">
+                        <label for="expense-metod">Pagamento</label>
+                        <select id="expense-metod" class="modal__input">
+                            <option value="pix">Pix</option>
+                            <option value="cripto">Cripto moedas</option>
+                            <option value="debito">Cartão de Débito</option>
+                            <option value="credito">Cartão de Crédito</option>
+                            <option value="default" selected>Selecione</option>
+                        </select>
+                    </div>
+
+                    <div class="value__container">
+                        <label for="expense-value">Valor</label>
+                        <input type="expense-value" id="expense-value" class="modal__input" required />
+                        <p class="modal__info"></p>
+                    </div>
+                    <div class="description__container">
+                        <label for="expense-description">Descrição</label>
+                        <input type="expense-description" id="expense-description" class="modal__input" required />
+                        <p class="modal__info"></p>
+                    </div>
+                </main>
+
+                <footer class="modal__footer">
+                    <button class="modal__btn modal__btn--primary">Concluir</button>
+                    <button class="modal__btn modal__btn--secondary" data-micromodal-close>Cancelar</button>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Transfer -->
+    <div class="modal micromodal-slide" id="modal-transfer" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-login-title">
+                <!-- Botão de fechar -->
+                <button class="modal__close" aria-label="Fechar modal" data-micromodal-close>&times;</button>
+
+                <!-- Conteúdo do modal -->
+                <header class="modal__header">
+                    <img src="./src/icons/transfer.svg" alt="expense icon">
+                    <h2 class="modal__title" id="modal-login-title">Despesas</h2>
+                </header>
+
+                <main class="modal__content">
+                    <div class="metod__container">
+                        <label for="transfer-metod">Pagamento</label>
+                        <select id="transfer-metod" class="modal__input">
+                            <option value="pix">Pix</option>
+                            <option value="cripto">Cripto Moedas</option>
+                            <option value="debito">Cartão de Débito</option>
+                            <option value="credito">Cartão de Crédito</option>
+                            <option value="default" selected>Selecione</option>
+                        </select>
+                    </div>
+
+                    <div class="value__container">
+                        <label for="transfer-value">Valor</label>
+                        <input type="transfer-value" id="transfer-value" class="modal__input" required />
+                        <p class="modal__info"></p>
+                    </div>
+                    <div class="description__container">
+                        <label for="transfer-description">Descrição</label>
+                        <input type="transfer-description" id="transfer-description" class="modal__input" required />
+                        <p class="modal__info"></p>
+                    </div>
+                </main>
+
+                <footer class="modal__footer">
+                    <button class="modal__btn modal__btn--primary">Concluir</button>
+                    <button class="modal__btn modal__btn--secondary" data-micromodal-close>Cancelar</button>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

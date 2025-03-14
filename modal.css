@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Oculta o modal por padrão */
+.modal {
+	display: none;
+}
+
+.modal.is-open {
+	display: block;
+}
+
+/* Fundo escuro ao redor do modal */
+.modal__overlay {
+	width: 100%;
+	height: 100%;
+
+	top: 0;
+	left: 0;
+	display: flex;
+	position: fixed;
+
+	align-items: center;
+	justify-content: center;
+
+	background: rgba(0, 0, 0, 0.6);
+}
+
+/* Caixa branca do modal */
+.modal__container {
+	height: 376px;
+	min-width: 406px;
+	position: relative;
+
+	padding: 32px;
+	background: white;
+
+	border-radius: 8px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Botão de fechar */
+.modal__close {
+	position: absolute;
+
+	top: 20px;
+	right: 32px;
+
+	border: none;
+	cursor: pointer;
+	background: none;
+
+	font: 600 2.3rem / 1.2 "Inter", sans-serif;
+}
+
+/* Título */
+.modal__header {
+	display: flex;
+	margin-bottom: 16px;
+	gap: 8px;
+	flex-direction: row;
+}
+
+.modal__title {
+	display: flex;
+
+	gap: 12px;
+	align-items: center;
+
+	font: 600 2.3rem / 1.2 "Inter", sans-serif;
+}
+
+/* Campos de entrada */
+
+.modal__content {
+	display: flex;
+	gap: 16px;
+	flex-direction: column;
+}
+
+.username__container {
+	margin-top: 16px;
+}
+
+.modal__input {
+	width: 100%;
+
+	padding: 8px;
+	margin-top: 5px;
+
+	border-radius: 4px;
+	border: 1px solid #ccc;
+}
+
+/* Mensagem de senha */
+.modal__info {
+	color: #666;
+
+	margin-top: 8px;
+	font: 600 0.9rem / 1.2 "Inter", sans-serif;
+}
+
+/* Botões */
+
+.modal__footer {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+
+	gap: 8px;
+	margin-top: 16px;
+}
+
+.modal__btn {
+	border: none;
+
+	cursor: pointer;
+	border-radius: 4px;
+
+	padding: 10px 15px;
+	font: 600 1.2rem / 1.2 "Inter", sans-serif;
+}
+
+.modal__btn--primary {
+	color: white;
+	background: #007bff;
+}
+
+.modal__btn--secondary {
+	color: #007bff;
+	background: none;
+}
