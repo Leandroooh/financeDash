@@ -71,6 +71,7 @@
                 <tr>
                     <th>Descrição</th>
                     <th>Método</th>
+                    <th>Tipo</th>
                     <th>Data</th>
                     <th>Valor</th>
                     <th></th>
@@ -107,7 +108,6 @@
                         <label for="income-metod">Pagamento</label>
                         <select id="income-metod" class="modal__input metod">
                             <option value="pix">Pix</option>
-                            <option value="cripto">Cripto moedas</option>
                             <option value="debito">Cartão de Débito</option>
                             <option value="credito">Cartão de Crédito</option>
                             <option value="default" selected>Selecione</option>
@@ -115,16 +115,27 @@
                     </div>
 
                     <div class="value__container">
-                        <label for="income-amount">Valor</label>
-                        <input type="income-amount" id="income-amount" class="modal__input amount" required />
+                        <label for="value-amount">Valor</label>
+                        <input type="value-amount" id="value-amount" class="modal__input amount" required />
                         <p class="modal__info"></p>
                     </div>
+
                     <div class="description__container">
-                        <label for="-description">Descrição</label>
+                        <label for="income-description">Descrição</label>
                         <input type="income-description" id="income-description" class="modal__input description"
                             required />
                         <p class="modal__info"></p>
                     </div>
+
+                    <div class="type__container">
+                        <label for="type-metod">Tipo de Operação</label>
+                        <select id="type-metod" class="modal__input types" disabled>
+                            <option value="Investimento" selected>Investimento</option>
+                            <option value="Transferência">Transferência</option>
+                            <option value="Despesas">Despesas</option>
+                        </select>
+                    </div>
+
                 </main>
 
                 <footer class="modal__footer">
@@ -173,6 +184,15 @@
                             required />
                         <p class="modal__info"></p>
                     </div>
+
+                    <div class="type__container">
+                        <label for="type-metod">Tipo de Operação</label>
+                        <select id="type-metod" class="modal__input types" disabled>
+                            <option value="Despesas" selected>Despesas</option>
+                            <option value="Investimento">Investimento</option>
+                            <option value="Transferência">Transferência</option>
+                        </select>
+                    </div>
                 </main>
 
                 <footer class="modal__footer">
@@ -205,7 +225,6 @@
                         <label for="transfer-metod">Pagamento</label>
                         <select id="transfer-metod" class="modal__input metod">
                             <option value="pix">Pix</option>
-                            <option value="cripto">Cripto Moedas</option>
                             <option value="debito">Cartão de Débito</option>
                             <option value="credito">Cartão de Crédito</option>
                             <option value="default" selected>Selecione</option>
@@ -222,6 +241,14 @@
                         <input type="transfer-description" id="transfer-description" class="modal__input description"
                             required />
                         <p class="modal__info"></p>
+                    </div>
+                    <div class="type__container">
+                        <label for="type-metod">Tipo de Operação</label>
+                        <select id="type-metod" class="modal__input types" disabled>
+                            <option value="Transferência" Selected>Transferência</option>
+                            <option value="Investimento">Investimento</option>
+                            <option value="Despesas">Despesas</option>
+                        </select>
                     </div>
                 </main>
 

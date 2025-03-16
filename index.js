@@ -2,6 +2,18 @@ import MicroModal from "https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.
 
 const table = document.getElementById("table-body");
 
+let id = 0;
+const getLastId = async () => {
+	const response = await fetch("http://localhost:3000/transactions");
+	const transactions = await response.json();
+
+	if (transactions.length > 0) {
+		id = Math.max(...transactions.map((item) => item.id));
+	} else {
+		id = 1;
+	}
+};
+
 const createHistory = (dataInfo) => {
 	const tr = document.createElement("tr");
 
@@ -10,6 +22,9 @@ const createHistory = (dataInfo) => {
 
 	const accountTd = document.createElement("td");
 	accountTd.textContent = dataInfo.metod;
+
+	const typeTd = document.createElement("td");
+	typeTd.textContent = dataInfo.type;
 
 	const dateTd = document.createElement("td");
 	dateTd.textContent = dataInfo.date;
@@ -30,7 +45,7 @@ const createHistory = (dataInfo) => {
 	button.append(img);
 	optionsTd.append(button);
 
-	tr.append(nameTd, accountTd, dateTd, amountTd, optionsTd);
+	tr.append(nameTd, accountTd, typeTd, dateTd, amountTd, optionsTd);
 	table.append(tr);
 };
 
@@ -57,15 +72,29 @@ const submitPost = async () => {
 	const inputAmount = activeModal.querySelector(".amount");
 	const inputDesc = activeModal.querySelector(".description");
 	const inputMetod = activeModal.querySelector(".metod");
+	const inputType = activeModal.querySelector(".types");
+
+	const amountData = inputAmount.value;
+	const descData = inputDesc.value;
+	const metodData = inputMetod.value;
+	const typeData = inputType.value;
+
+	await getLastId();
+	id += 1;
+
+	if (!amountData || !descData || !metodData || !typeData) {
+		console.log("Os campos fornecidos não podem ser nulos");
+		return;
+	}
 
 	const data = {
+		id: id,
 		date: getDate(),
-		amount: inputAmount.value,
-		metod: inputMetod.value,
-		description: inputDesc.value,
+		amount: amountData,
+		metod: metodData,
+		type: typeData,
+		description: descData,
 	};
-
-	console.log(data);
 
 	const response = await fetch("http://localhost:3000/transactions", {
 		method: "POST",
