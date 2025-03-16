@@ -44,59 +44,70 @@ const renderHistory = async () => {
 
 const getDate = () => {
 	const today = new Date();
-    const day = String(today.getDate()).padStart(2, "0");
-    const month = String(today.getMonth() + 1).padStart(2, "0"); // Mês começa do zero
-    const year = today.getFullYear();
-    
-    return `${day}/${month}/${year}`;
-}
+	const day = String(today.getDate()).padStart(2, "0");
+	const month = String(today.getMonth() + 1).padStart(2, "0"); // Mês começa do zero
+	const year = today.getFullYear();
 
-const submitIncome = async () => { 
-	
-	const incomeAmount = document.getElementById('income-amount');
-	const incomeDesc = document.getElementById('income-description');
-	const incomeMetod = document.getElementById('income-metod');
+	return `${day}/${month}/${year}`;
+};
+
+const submitPost = async () => {
+	const activeModal = document.querySelector(".modal.is-open");
+
+	const inputAmount = activeModal.querySelector(".amount");
+	const inputDesc = activeModal.querySelector(".description");
+	const inputMetod = activeModal.querySelector(".metod");
 
 	const data = {
 		date: getDate(),
-		amount: incomeAmount.value,
-		metod: incomeMetod.value,
-		description: incomeDesc.value,
-	}
+		amount: inputAmount.value,
+		metod: inputMetod.value,
+		description: inputDesc.value,
+	};
+
+	console.log(data);
 
 	const response = await fetch("http://localhost:3000/transactions", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
-		}, 
+		},
 
-		body: JSON.stringify(data)
+		body: JSON.stringify(data),
 	});
 
-	const savedData = await response.json()
-	
-	incomeAmount.value = ''
-	incomeMetod.value = ''
-	incomeDesc.value = ''
+	const savedData = await response.json();
 
-	renderHistory(savedData)
-	console.log(savedData)
+	inputAmount.value = "";
+	inputMetod.value = "";
+	inputDesc.value = "";
 
-} 
+	renderHistory(savedData);
+	console.log(savedData);
+};
 
-document.addEventListener('DOMContentLoaded', () => {
-    const incomeBtn = document.getElementById("income-btn");
-    if (incomeBtn) {
-        incomeBtn.addEventListener('click', (ev) => {
-            ev.preventDefault();
-            submitIncome();
-        });
-    }
+document.addEventListener("DOMContentLoaded", () => {
+	// Inicializar o MicroModal
+	MicroModal.init({
+		disableScroll: true,
+		onShow: () => {
+			const activeModal = document.querySelector(".modal.is-open");
+
+			if (activeModal) {
+				const confirmBtn = activeModal.querySelector(".confirm-button");
+
+				if (confirmBtn) {
+					confirmBtn.removeEventListener("click", clickConfirm); // Remove um ouvinte anterior, se houver
+					confirmBtn.addEventListener("click", clickConfirm);
+				}
+			}
+		},
+	});
 });
+
+const clickConfirm = (ev) => {
+	ev.preventDefault();
+	submitPost();
+};
 
 renderHistory();
-
-/* Modal Init */
-MicroModal.init({
-	disableScroll: true,
-});

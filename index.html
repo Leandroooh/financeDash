@@ -90,7 +90,8 @@
     <!-- Modal Income -->
     <div class="modal micromodal-slide" id="modal-income" aria-hidden="true">
         <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-login-title">
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-income-title">
+
                 <!-- Botão de fechar -->
                 <button type="button" class="modal__close" aria-label="Fechar modal"
                     data-micromodal-close>&times;</button>
@@ -104,7 +105,7 @@
                 <main class="modal__content">
                     <div class="metod__container">
                         <label for="income-metod">Pagamento</label>
-                        <select id="income-metod" class="modal__input">
+                        <select id="income-metod" class="modal__input metod">
                             <option value="pix">Pix</option>
                             <option value="cripto">Cripto moedas</option>
                             <option value="debito">Cartão de Débito</option>
@@ -115,18 +116,19 @@
 
                     <div class="value__container">
                         <label for="income-amount">Valor</label>
-                        <input type="income-amount" id="income-amount" class="modal__input" required />
+                        <input type="income-amount" id="income-amount" class="modal__input amount" required />
                         <p class="modal__info"></p>
                     </div>
                     <div class="description__container">
                         <label for="-description">Descrição</label>
-                        <input type="income-description" id="income-description" class="modal__input" required />
+                        <input type="income-description" id="income-description" class="modal__input description"
+                            required />
                         <p class="modal__info"></p>
                     </div>
                 </main>
 
                 <footer class="modal__footer">
-                    <button type="button" class="modal__btn modal__btn--primary" id="income-btn">Investir</button>
+                    <button type="button" class="modal__btn modal__btn--primary confirm-button">Investir</button>
                     <button type="button" class="modal__btn modal__btn--secondary"
                         data-micromodal-close>Cancelar</button>
                 </footer>
@@ -152,7 +154,7 @@
                 <main class="modal__content">
                     <div class="metod__container">
                         <label for="expense-metod">Pagamento</label>
-                        <select id="expense-metod" class="modal__input">
+                        <select id="expense-metod" class="modal__input metod">
                             <option value="Pix">Pix</option>
                             <option value="Cartão de Débito">Cartão de Débito</option>
                             <option value="Cartão de Crédito">Cartão de Crédito</option>
@@ -162,18 +164,20 @@
 
                     <div class="value__container">
                         <label for="expense-value">Valor</label>
-                        <input type="expense-value" id="expense-value" class="modal__input" required />
+                        <input type="expense-value" id="expense-value" class="modal__input amount" required />
                         <p class="modal__info"></p>
                     </div>
                     <div class="description__container">
                         <label for="expense-description">Descrição</label>
-                        <input type="expense-description" id="expense-description" class="modal__input" required />
+                        <input type="expense-description" id="expense-description" class="modal__input description"
+                            required />
                         <p class="modal__info"></p>
                     </div>
                 </main>
 
                 <footer class="modal__footer">
-                    <button type="button" class="modal__btn modal__btn--primary">Concluir</button>
+                    <button type="button" class="modal__btn modal__btn--primary confirm-button"
+                        id="expense-btn">Concluir</button>
                     <button type="button" class="modal__btn modal__btn--secondary"
                         data-micromodal-close>Cancelar</button>
                 </footer>
@@ -199,7 +203,7 @@
                 <main class="modal__content">
                     <div class="metod__container">
                         <label for="transfer-metod">Pagamento</label>
-                        <select id="transfer-metod" class="modal__input">
+                        <select id="transfer-metod" class="modal__input metod">
                             <option value="pix">Pix</option>
                             <option value="cripto">Cripto Moedas</option>
                             <option value="debito">Cartão de Débito</option>
@@ -210,18 +214,19 @@
 
                     <div class="value__container">
                         <label for="transfer-value">Valor</label>
-                        <input type="transfer-value" id="transfer-value" class="modal__input" required />
+                        <input type="transfer-value" id="transfer-value" class="modal__input amount" required />
                         <p class="modal__info"></p>
                     </div>
                     <div class="description__container">
                         <label for="transfer-description">Descrição</label>
-                        <input type="transfer-description" id="transfer-description" class="modal__input" required />
+                        <input type="transfer-description" id="transfer-description" class="modal__input description"
+                            required />
                         <p class="modal__info"></p>
                     </div>
                 </main>
 
                 <footer class="modal__footer">
-                    <button type="button" class="modal__btn modal__btn--primary">Concluir</button>
+                    <button type="button" class="modal__btn modal__btn--primary confirm-button">Concluir</button>
                     <button type="button" class="modal__btn modal__btn--secondary"
                         data-micromodal-close>Cancelar</button>
                 </footer>

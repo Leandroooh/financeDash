@@ -1,39 +1,32 @@
 {
   "transactions": [
     {
-      "id": "1",
-      "date": "01/12/2024",
-      "amount": "R$ 69,00",
+      "id": "1dd2",
+      "date": "16/03/2025",
+      "amount": "250,00",
+      "metod": "cripto",
+      "description": "Investimento"
+    },
+    {
+      "id": "0429",
+      "date": "16/03/2025",
+      "amount": "123,00",
       "metod": "Cartão de Crédito",
-      "description": "Conta de Energia"
+      "description": "Despesas"
     },
     {
-      "id": "2",
-      "date": "01/12/2024",
-      "amount": "R$ 132,00",
-      "metod": "Pix",
-      "description": "Conta de Água"
+      "id": "4ad9",
+      "date": "16/03/2025",
+      "amount": "2.000,00",
+      "metod": "debito",
+      "description": "Transferência bancária"
     },
     {
-      "id": "bf54",
-      "date": "14/03/2025",
+      "id": "f428",
+      "date": "16/03/2025",
       "amount": "123",
       "metod": "cripto",
-      "description": "Pagamento de Conta"
-    },
-    {
-      "id": "82e3",
-      "date": "14/03/2025",
-      "amount": "123",
-      "metod": "debito",
-      "description": "Pagamento de Conta"
-    },
-    {
-      "id": "cc2b",
-      "date": "14/03/2025",
-      "amount": "213",
-      "metod": "debito",
-      "description": "Pagamento de Contaasd"
+      "description": "123"
     }
   ]
 }
