@@ -1,36 +1,3 @@
 {
-  "transactions": [
-    {
-      "id": 1,
-      "date": "16/03/2025",
-      "amount": "3400",
-      "metod": "debito",
-      "type": "Investimento",
-      "description": "Skins de CS2"
-    },
-    {
-      "id": 2,
-      "date": "16/03/2025",
-      "amount": "4.500,00",
-      "metod": "Cartão de Crédito",
-      "type": "Despesas",
-      "description": "Pagamento de despesas"
-    },
-    {
-      "id": 3,
-      "date": "16/03/2025",
-      "amount": "2500,00",
-      "metod": "debito",
-      "type": "Transferência",
-      "description": "Pagamento de Colaborador"
-    },
-    {
-      "id": 4,
-      "date": "16/03/2025",
-      "amount": "3400,00",
-      "metod": "Cartão de Débito",
-      "type": "Despesas",
-      "description": "Conta de Telefone"
-    }
-  ]
+	"transactions": []
 }

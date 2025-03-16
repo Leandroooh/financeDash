@@ -7,11 +7,12 @@ const getLastId = async () => {
 	const response = await fetch("http://localhost:3000/transactions");
 	const transactions = await response.json();
 
-	if (transactions.length > 0) {
-		id = Math.max(...transactions.map((item) => item.id));
-	} else {
+	if (!transactions.length > 0) {
 		id = 1;
+		return;
 	}
+
+	id = Math.max(...transactions.map((item) => item.id));
 };
 
 const createHistory = (dataInfo) => {
