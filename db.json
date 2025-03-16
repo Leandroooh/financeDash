@@ -1,32 +1,32 @@
 {
-  "transactions": [
-    {
-      "id": "1dd2",
-      "date": "16/03/2025",
-      "amount": "250,00",
-      "metod": "cripto",
-      "description": "Investimento"
-    },
-    {
-      "id": "0429",
-      "date": "16/03/2025",
-      "amount": "123,00",
-      "metod": "Cartão de Crédito",
-      "description": "Despesas"
-    },
-    {
-      "id": "4ad9",
-      "date": "16/03/2025",
-      "amount": "2.000,00",
-      "metod": "debito",
-      "description": "Transferência bancária"
-    },
-    {
-      "id": "f428",
-      "date": "16/03/2025",
-      "amount": "123",
-      "metod": "cripto",
-      "description": "123"
-    }
-  ]
+	"transactions": [
+		{
+			"id": 1,
+			"date": "16/03/2025",
+			"amount": "532,00",
+			"metod": "cripto",
+			"description": "Investimento"
+		},
+		{
+			"id": 2,
+			"date": "16/03/2025",
+			"amount": "622,00",
+			"metod": "Cartão de Débito",
+			"description": "Conta de Internet"
+		},
+		{
+			"id": 3,
+			"date": "16/03/2025",
+			"amount": "32,00",
+			"metod": "debito",
+			"description": "Placa de Vídeo"
+		},
+		{
+			"id": "6686",
+			"date": "16/03/2025",
+			"amount": "524",
+			"metod": "cripto",
+			"description": "Fundo Imobiliario"
+		}
+	]
 }
