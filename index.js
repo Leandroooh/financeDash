@@ -117,6 +117,11 @@ const submitPost = async () => {
 	console.log(savedData);
 };
 
+const clickConfirm = (ev) => {
+	ev.preventDefault();
+	submitPost();
+};
+
 document.addEventListener("DOMContentLoaded", () => {
 	// Inicializar o MicroModal
 	MicroModal.init({
@@ -135,11 +140,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		},
 	});
 });
-
-const clickConfirm = (ev) => {
-	ev.preventDefault();
-	submitPost();
-};
 
 renderHistory();
 
@@ -173,12 +173,10 @@ const updateInvestiment = async (typeClass, investimentType) => {
 
 const executeUpdate = async () => {
 	try {
-		// Tenta executar a função updateInvestiment
-		await updateInvestiment("investiment", "Investimento");
+		await updateInvestiment("investiment", "Investimento"); // ID.HTML , Type.DB;
 		await updateInvestiment("expense", "Despesas");
 		await updateInvestiment("transfer", "Transferência");
 	} catch (error) {
-		// Se houver um erro, ele será capturado aqui
 		console.error("Erro ao atualizar investimentos:", error.message);
 	}
 };
