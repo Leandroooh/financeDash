@@ -1,4 +1,5 @@
 const inputAmount = document.querySelector(".amount");
+const inputDescription = document.querySelector(".description");
 
 // Evento para formatar o valor enquanto o usuário digita
 inputAmount.addEventListener("input", () => {
