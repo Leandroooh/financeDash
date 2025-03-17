@@ -1,5 +1,5 @@
 const inputAmount = document.querySelector(".amount");
-const inputDescription = document.querySelector(".description");
+const inputmethod = document.querySelector(".method");
 
 // Evento para formatar o valor enquanto o usuário digita
 inputAmount.addEventListener("input", () => {
@@ -19,4 +19,13 @@ inputAmount.addEventListener("input", () => {
 
 	// Atualiza o input com o prefixo "R$"
 	inputAmount.value = value.length > 0 ? `R$ ${value}` : "";
+});
+
+inputmethod.addEventListener("change", (ev) => {
+	if (inputmethod.value === "default") {
+		// Impede qualquer ação de envio ou processamento aqui
+		ev.preventDefault(); // Embora o preventDefault geralmente seja para eventos como submit, ele pode ser usado de forma mais geral, como uma forma de cancelar qualquer ação padrão.
+		alert("Por favor, selecione um método de pagamento válido.");
+		inputmethod.value = "Pix";
+	}
 });

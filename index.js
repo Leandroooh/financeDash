@@ -66,7 +66,6 @@ const renderHistory = async () => {
 	const historyData = await response.json();
 
 	for (const item of historyData) createHistory(item);
-	console.log("chegou");
 };
 
 const submitPost = async () => {

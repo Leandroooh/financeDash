@@ -23,6 +23,54 @@
       "method": "credito",
       "type": "Investimento",
       "description": "123456789123456789123456789123"
+    },
+    {
+      "id": 5,
+      "date": "17/03/2025",
+      "amount": "R$ 1.232,13",
+      "method": "default",
+      "type": "Investimento",
+      "description": "123123"
+    },
+    {
+      "id": 6,
+      "date": "17/03/2025",
+      "amount": "R$ 1,23",
+      "method": "default",
+      "type": "Investimento",
+      "description": "pagamento"
+    },
+    {
+      "id": 7,
+      "date": "17/03/2025",
+      "amount": "R$ 232,34",
+      "method": "default",
+      "type": "Investimento",
+      "description": "123"
+    },
+    {
+      "id": 8,
+      "date": "17/03/2025",
+      "amount": "R$ 1,23",
+      "method": "debito",
+      "type": "Investimento",
+      "description": "123213"
+    },
+    {
+      "id": 9,
+      "date": "17/03/2025",
+      "amount": "R$ 1,23",
+      "method": "default",
+      "type": "Investimento",
+      "description": "123"
+    },
+    {
+      "id": 10,
+      "date": "17/03/2025",
+      "amount": "R$ 1,23",
+      "method": "default",
+      "type": "Investimento",
+      "description": "123"
     }
   ]
 }
