@@ -1,76 +1,28 @@
 {
-  "transactions": [
-    {
-      "id": 2,
-      "date": "17/03/2025",
-      "amount": "124321",
-      "method": "default",
-      "type": "Investimento",
-      "description": "1323"
-    },
-    {
-      "id": 3,
-      "date": "17/03/2025",
-      "amount": "R$ 500,00",
-      "method": "default",
-      "type": "Investimento",
-      "description": "Investimento em Banco"
-    },
-    {
-      "id": 4,
-      "date": "17/03/2025",
-      "amount": "R$ 500,00",
-      "method": "credito",
-      "type": "Investimento",
-      "description": "123456789123456789123456789123"
-    },
-    {
-      "id": 5,
-      "date": "17/03/2025",
-      "amount": "R$ 1.232,13",
-      "method": "default",
-      "type": "Investimento",
-      "description": "123123"
-    },
-    {
-      "id": 6,
-      "date": "17/03/2025",
-      "amount": "R$ 1,23",
-      "method": "default",
-      "type": "Investimento",
-      "description": "pagamento"
-    },
-    {
-      "id": 7,
-      "date": "17/03/2025",
-      "amount": "R$ 232,34",
-      "method": "default",
-      "type": "Investimento",
-      "description": "123"
-    },
-    {
-      "id": 8,
-      "date": "17/03/2025",
-      "amount": "R$ 1,23",
-      "method": "debito",
-      "type": "Investimento",
-      "description": "123213"
-    },
-    {
-      "id": 9,
-      "date": "17/03/2025",
-      "amount": "R$ 1,23",
-      "method": "default",
-      "type": "Investimento",
-      "description": "123"
-    },
-    {
-      "id": 10,
-      "date": "17/03/2025",
-      "amount": "R$ 1,23",
-      "method": "default",
-      "type": "Investimento",
-      "description": "123"
-    }
-  ]
+	"transactions": [
+		{
+			"id": 1,
+			"date": "17/03/2025",
+			"amount": "R$ 200,00",
+			"method": "debito",
+			"type": "Investimento",
+			"description": "Trade de Ações"
+		},
+		{
+			"id": 2,
+			"date": "17/03/2025",
+			"amount": "R$ 1.000,00",
+			"method": "Pix",
+			"type": "Despesas",
+			"description": "Conta de Internet"
+		},
+		{
+			"id": 3,
+			"date": "17/03/2025",
+			"amount": "R$ 500,00",
+			"method": "pix",
+			"type": "Transferência",
+			"description": "Pedreiro"
+		}
+	]
 }

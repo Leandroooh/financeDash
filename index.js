@@ -1,15 +1,16 @@
 import MicroModal from "https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.es.min.js";
 
-const table = document.getElementById("table-body");
-const API_URL = "http://localhost:3000/transactions";
-
 let id = 0;
+
+const table = document.getElementById("table-body");
+
+const API_URL = "http://localhost:3000/transactions";
 
 const getLastId = async () => {
 	const response = await fetch(API_URL);
 	const transactions = await response.json();
 
-	if (!transactions.length > 0) {
+	if (!transactions.length < 0) {
 		id = 1;
 		return;
 	}
@@ -141,3 +142,45 @@ const clickConfirm = (ev) => {
 };
 
 renderHistory();
+
+const updateInvestiment = async (typeClass, investimentType) => {
+	const balance = document.getElementById(`${typeClass}-card`);
+
+	const response = await fetch(API_URL);
+	const investments = await response.json();
+
+	// Filtra os itens de "Investimento"
+	const filteredItems = investments.filter(
+		(item) => item.type === investimentType,
+	);
+
+	// Usa reduce para calcular o total
+	const totalValue = filteredItems.reduce((accum, item) => {
+		const amount = Number.parseFloat(
+			item.amount.replace("R$", "").replace(".", "").replace(",", "."),
+		);
+		return accum + amount;
+	}, 0);
+
+	let value = totalValue.toFixed(2);
+
+	value = value.replace(".", ",");
+	value = value.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+
+	const formattedValue = `R$ ${value}`;
+	balance.textContent = formattedValue;
+};
+
+const executeUpdate = async () => {
+	try {
+		// Tenta executar a função updateInvestiment
+		await updateInvestiment("investiment", "Investimento");
+		await updateInvestiment("expense", "Despesas");
+		await updateInvestiment("transfer", "Transferência");
+	} catch (error) {
+		// Se houver um erro, ele será capturado aqui
+		console.error("Erro ao atualizar investimentos:", error.message);
+	}
+};
+
+executeUpdate();
