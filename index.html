@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="modal.css">
+
+    <script src="./formatter.js" defer></script>
     <script type="module" src="./index.js" defer></script>
 
 </head>
@@ -104,9 +106,9 @@
                 </header>
 
                 <main class="modal__content">
-                    <div class="metod__container">
-                        <label for="income-metod">Pagamento</label>
-                        <select id="income-metod" class="modal__input metod">
+                    <div class="method__container">
+                        <label for="income-method">Pagamento</label>
+                        <select id="income-method" class="modal__input method">
                             <option value="pix">Pix</option>
                             <option value="debito">Cartão de Débito</option>
                             <option value="credito">Cartão de Crédito</option>
@@ -128,8 +130,8 @@
                     </div>
 
                     <div class="type__container">
-                        <label for="type-metod">Tipo de Operação</label>
-                        <select id="type-metod" class="modal__input types" disabled>
+                        <label for="type-method">Tipo de Operação</label>
+                        <select id="type-method" class="modal__input types" disabled>
                             <option value="Investimento" selected>Investimento</option>
                             <option value="Transferência">Transferência</option>
                             <option value="Despesas">Despesas</option>
@@ -163,9 +165,9 @@
                 </header>
 
                 <main class="modal__content">
-                    <div class="metod__container">
-                        <label for="expense-metod">Pagamento</label>
-                        <select id="expense-metod" class="modal__input metod">
+                    <div class="method__container">
+                        <label for="expense-method">Pagamento</label>
+                        <select id="expense-method" class="modal__input method">
                             <option value="Pix">Pix</option>
                             <option value="Cartão de Débito">Cartão de Débito</option>
                             <option value="Cartão de Crédito">Cartão de Crédito</option>
@@ -186,8 +188,8 @@
                     </div>
 
                     <div class="type__container">
-                        <label for="type-metod">Tipo de Operação</label>
-                        <select id="type-metod" class="modal__input types" disabled>
+                        <label for="type-method">Tipo de Operação</label>
+                        <select id="type-method" class="modal__input types" disabled>
                             <option value="Despesas" selected>Despesas</option>
                             <option value="Investimento">Investimento</option>
                             <option value="Transferência">Transferência</option>
@@ -221,9 +223,9 @@
                 </header>
 
                 <main class="modal__content">
-                    <div class="metod__container">
-                        <label for="transfer-metod">Pagamento</label>
-                        <select id="transfer-metod" class="modal__input metod">
+                    <div class="method__container">
+                        <label for="transfer-method">Pagamento</label>
+                        <select id="transfer-method" class="modal__input method">
                             <option value="pix">Pix</option>
                             <option value="debito">Cartão de Débito</option>
                             <option value="credito">Cartão de Crédito</option>
@@ -243,8 +245,8 @@
                         <p class="modal__info"></p>
                     </div>
                     <div class="type__container">
-                        <label for="type-metod">Tipo de Operação</label>
-                        <select id="type-metod" class="modal__input types" disabled>
+                        <label for="type-method">Tipo de Operação</label>
+                        <select id="type-method" class="modal__input types" disabled>
                             <option value="Transferência" Selected>Transferência</option>
                             <option value="Investimento">Investimento</option>
                             <option value="Despesas">Despesas</option>

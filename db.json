@@ -1,3 +1,20 @@
 {
-	"transactions": []
+  "transactions": [
+    {
+      "id": 2,
+      "date": "17/03/2025",
+      "amount": "124321",
+      "method": "default",
+      "type": "Investimento",
+      "description": "1323"
+    },
+    {
+      "id": 3,
+      "date": "17/03/2025",
+      "amount": "R$ 500,00",
+      "method": "default",
+      "type": "Investimento",
+      "description": "Investimento em Banco"
+    }
+  ]
 }
