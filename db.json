@@ -1,28 +1,36 @@
 {
-	"transactions": [
-		{
-			"id": 1,
-			"date": "17/03/2025",
-			"amount": "R$ 200,00",
-			"method": "debito",
-			"type": "Investimento",
-			"description": "Trade de Ações"
-		},
-		{
-			"id": 2,
-			"date": "17/03/2025",
-			"amount": "R$ 1.000,00",
-			"method": "Pix",
-			"type": "Despesas",
-			"description": "Conta de Internet"
-		},
-		{
-			"id": 3,
-			"date": "17/03/2025",
-			"amount": "R$ 500,00",
-			"method": "pix",
-			"type": "Transferência",
-			"description": "Pedreiro"
-		}
-	]
+  "transactions": [
+    {
+      "id": null,
+      "date": "17/03/2025",
+      "amount": "R$ 1.500,00",
+      "method": "Pix",
+      "type": "Investimento",
+      "description": "Ações"
+    },
+    {
+      "id": "1",
+      "date": "17/03/2025",
+      "amount": "R$ 250,00",
+      "method": "Pix",
+      "type": "Despesas",
+      "description": "Conta de Internet"
+    },
+    {
+      "id": "2",
+      "date": "17/03/2025",
+      "amount": "R$ 15,00",
+      "method": "Pix",
+      "type": "Transferência",
+      "description": "Copo de Açai (400ML)"
+    },
+    {
+      "id": 3,
+      "date": "17/03/2025",
+      "amount": "R$ 250,00",
+      "method": "Débito",
+      "type": "Investimento",
+      "description": "Mercado Imobiliario"
+    }
+  ]
 }

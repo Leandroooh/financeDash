@@ -51,11 +51,30 @@ const createHistory = (dataInfo) => {
 	button.type = "button";
 	button.classList.add("options-button");
 
+	const dropdown = document.createElement("div");
+	dropdown.classList.add("dropdown");
+
 	const img = document.createElement("img");
 	img.src = "./src/icons/settings.svg";
 	img.alt = "Options";
 
-	button.append(img);
+	const dropdownMenu = document.createElement("div");
+	dropdownMenu.classList.add("dropdown-menu");
+
+	const dropdownEdit = document.createElement("button");
+	dropdownEdit.classList.add("dropdown-item");
+	dropdownEdit.id = "edit-button";
+	dropdownEdit.textContent = "Editar";
+
+	const dropdownDelete = document.createElement("button");
+	dropdownDelete.classList.add("dropdown-item");
+	dropdownDelete.id = "delete-button";
+	dropdownDelete.textContent = "Excluir";
+
+	dropdownMenu.append(dropdownEdit, dropdownDelete);
+	dropdown.append(img, dropdownMenu);
+	button.append(dropdown);
+
 	optionsTd.append(button);
 
 	tr.append(nameTd, accountTd, typeTd, dateTd, amountTd, optionsTd);
@@ -143,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 renderHistory();
 
-const updateInvestiment = async (typeClass, investimentType) => {
+const updateCards = async (typeClass, investimentType) => {
 	const balance = document.getElementById(`${typeClass}-card`);
 
 	const response = await fetch(API_URL);
@@ -173,9 +192,9 @@ const updateInvestiment = async (typeClass, investimentType) => {
 
 const executeUpdate = async () => {
 	try {
-		await updateInvestiment("investiment", "Investimento"); // ID.HTML , Type.DB;
-		await updateInvestiment("expense", "Despesas");
-		await updateInvestiment("transfer", "Transferência");
+		await updateCards("investiment", "Investimento"); // ID.HTML , Type.DB;
+		await updateCards("expense", "Despesas");
+		await updateCards("transfer", "Transferência");
 	} catch (error) {
 		console.error("Erro ao atualizar investimentos:", error.message);
 	}
