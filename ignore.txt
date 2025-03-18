@@ -1,0 +1,27 @@
+    <div class="modal micromodal-slide" id="options-modal" aria-hidden="true">
+        <div class="options_overlay" tabindex="-1" data-micromodal-close>
+            <div class="options_container" role="dialog" aria-modal="true" aria-labelledby="options_title">
+                <!-- Botão de fechar -->
+                <button type="button" class="modal__close" aria-label="Fechar modal"
+                    data-micromodal-close>&times;</button>
+
+                <!-- Conteúdo do modal -->
+                <header class="modal__header">
+                    <img src="./src/icons/expense.svg" alt="options icon">
+                    <h2 class="modal__title" id="modal-title">Configurações</h2>
+                </header>
+
+                <main class="modal__content">
+                    <div class="type__container">
+                        <label for="options">Descrição</label>
+                        <input id="options" class="options modal__input" disabled>
+                    </div>
+
+                    <div class="type__container">
+                        <label for="options">Data de Criação</label>
+                        <input id="options" class="options modal__input" disabled>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>

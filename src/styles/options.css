@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Modal - Cards */
+.modal {
+	display: none;
+}
+
+.modal.is-open {
+	display: block;
+}
+
+/* Fundo escuro ao redor do modal */
+.options_overlay {
+	width: 100%;
+	height: 100%;
+
+	top: 0;
+	left: 0;
+	display: flex;
+	position: fixed;
+
+	align-items: center;
+	justify-content: center;
+
+	background: rgba(0, 0, 0, 0.6);
+}
+
+.modal__header {
+	display: flex;
+	align-items: center;
+}
+
+/* Caixa branca do modal */
+.options_container {
+	height: 226px;
+	min-width: 406px;
+	position: relative;
+
+	padding: 32px;
+	background: white;
+
+	border-radius: 8px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal_input {
+	width: 100%;
+
+	padding: 8px;
+	margin-top: 5px;
+
+	border-radius: 4px;
+	border: 1px solid #ccc;
+}
+.option__content {
+	display: flex;
+
+	gap: 32px;
+	flex-direction: row;
+
+	align-self: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.option-buttons {
+	display: flex;
+
+	gap: 5px;
+	flex-direction: column;
+
+	align-self: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.option-buttons button {
+	width: 86px;
+	height: 32px;
+	border: 1px solid #eceff2;
+
+	background: #f9fafb;
+	box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.29);
+}
+
+.option-buttons img {
+	width: 52px;
+}
+
+/* Mensagem de senha */
+.modal__info {
+	color: #666;
+
+	margin-top: 8px;
+	font: 600 0.9rem / 1.2 "Inter", sans-serif;
+}
+
+/* Botões */
+
+.modal__footer {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+
+	gap: 8px;
+	margin-top: 16px;
+}
+
+.modal__btn {
+	border: none;
+
+	cursor: pointer;
+	border-radius: 4px;
+
+	padding: 10px 15px;
+	font: 600 1.2rem / 1.2 "Inter", sans-serif;
+}
+
+.modal__btn--primary {
+	color: white;
+	background: #007bff;
+}
+
+.modal__btn--secondary {
+	color: #007bff;
+	background: none;
+}
+
+/* Delete&Edit Modal */

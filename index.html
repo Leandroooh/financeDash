@@ -7,13 +7,12 @@
     <title>Controle de Finanças</title>
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./src/styles/dropdown.css">
     <link rel="stylesheet" href="./src/styles/modal.css">
+    <link rel="stylesheet" href="./src/styles/options.css">
 
     <script type="module" src="./index.js" defer></script>
     <link rel="shortcut icon" href="./src/icons/income.svg" type="image/x-icon">
 
-    <script type="module" src="./src/scripts/dropdown.js" defer></script>
     <script type="module" src="./src/scripts/formatter.js" defer></script>
     <script type="module" src="./src/scripts/updateCards.js" defer></script>
     <script type="module" src="./src/scripts/transactions.js" defer></script>
@@ -278,17 +277,18 @@
 
                 <!-- Conteúdo do modal -->
                 <header class="modal__header">
-                    <img src="./src/icons/settings.svg" alt="options icon">
-                    <h2 class="options_title" id="options-title">Options</h2>
+                    <img src="./src/icons/expense.svg" alt="options icon">
+                    <h2 class="modal__title" id="modal-title">Configurações</h2>
                 </header>
 
-                <main class="modal__content">
-
-                    <div class="type__container">
-                        <label for="options"></label>
-                        <select id="options" class="options" disabled>
-                            <h2>Você realmente deseja realizar a exclusão do item selecionado?</h2>
-                        </select>
+                <main class="option__content ">
+                    <div class="edit__container option-buttons">
+                        <img src="./src/icons/trash.svg" alt="delete icon">
+                        <button type="button">Editar</button>
+                    </div>
+                    <div class="delete__container option-buttons">
+                        <img src="./src/icons/trash.svg" alt="delete icon">
+                        <button type="button">Deletar</button>
                     </div>
                 </main>
             </div>
