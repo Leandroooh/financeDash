@@ -10,8 +10,8 @@ const getLastId = async () => {
 	const response = await fetch(API_URL);
 	const transactions = await response.json();
 
-	if (!transactions.length < 0) {
-		id = 1;
+	if (transactions.length === 0) {
+		id = 0;
 		return;
 	}
 
