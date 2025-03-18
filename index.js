@@ -29,6 +29,7 @@ const getDate = () => {
 
 const createHistory = (dataInfo) => {
 	const tr = document.createElement("tr");
+	tr.id = dataInfo.id;
 
 	const nameTd = document.createElement("td");
 	nameTd.textContent = dataInfo.description;
