@@ -62,12 +62,12 @@ const createHistory = (dataInfo) => {
 	dropdownMenu.classList.add("dropdown-menu");
 
 	const dropdownEdit = document.createElement("button");
-	dropdownEdit.classList.add("dropdown-item");
+	dropdownEdit.classList.add("dropdown-item", "edit-button");
 	dropdownEdit.id = "edit-button";
 	dropdownEdit.textContent = "Editar";
 
 	const dropdownDelete = document.createElement("button");
-	dropdownDelete.classList.add("dropdown-item");
+	dropdownDelete.classList.add("dropdown-item", "delete-button");
 	dropdownDelete.id = "delete-button";
 	dropdownDelete.textContent = "Excluir";
 
