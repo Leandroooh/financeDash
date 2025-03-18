@@ -26,35 +26,24 @@ export const createHistory = async (dataInfo) => {
 	const button = document.createElement("button");
 	button.type = "button";
 	button.classList.add("options-button");
+	button.setAttribute("data-micromodal-trigger", "options-modal");
 
-	const dropdown = document.createElement("div");
-	dropdown.classList.add("dropdown");
-
+	// Criando a imagem dentro do botão
 	const img = document.createElement("img");
-	img.src = "./src/icons/settings.svg";
+	img.src = "./src/icons/settings.svg"; // Caminho da imagem
 	img.alt = "Options";
 
-	const dropdownMenu = document.createElement("div");
-	dropdownMenu.classList.add("dropdown-menu");
-
-	const dropdownEdit = document.createElement("button");
-	dropdownEdit.classList.add("dropdown-item", "edit-button");
-	dropdownEdit.id = "edit-button";
-	dropdownEdit.textContent = "Editar";
-
-	const dropdownDelete = document.createElement("button");
-	dropdownDelete.classList.add("dropdown-item", "delete-button");
-	dropdownDelete.id = "delete-button";
-	dropdownDelete.textContent = "Excluir";
-
-	dropdownMenu.append(dropdownEdit, dropdownDelete);
-	dropdown.append(img, dropdownMenu);
-	button.append(dropdown);
+	// Adicionando a imagem no botão
+	button.appendChild(img);
 
 	optionsTd.append(button);
 
 	tr.append(nameTd, accountTd, typeTd, dateTd, amountTd, optionsTd);
 	table.append(tr);
+
+	img.addEventListener("click", () => {
+		MicroModal.show("options-modal"); // Abre o modal manualmente
+	});
 };
 
 export const renderHistory = async () => {
