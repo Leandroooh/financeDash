@@ -1,6 +1,6 @@
 document.addEventListener("click", (event) => {
 	if (event.target.classList.contains("delete-button")) {
-		console.log("Você pode deletar!");
+		event.stopPropagation(); // Evita que o clique feche o dropdown
 	}
 });
 

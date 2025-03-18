@@ -2,7 +2,7 @@ const API_URL = "http://localhost:3000/transactions";
 
 const table = document.getElementById("table-body");
 
-export const createHistory = (dataInfo) => {
+export const createHistory = async (dataInfo) => {
 	const tr = document.createElement("tr");
 	tr.id = dataInfo.id;
 

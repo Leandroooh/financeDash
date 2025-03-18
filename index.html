@@ -268,11 +268,30 @@
         </div>
     </div>
 
-    <div class="dropdown">
-        <img src="./src/icons/settings.svg" alt="Options">
-        <div class="dropdown-menu">
-            <button class="dropdown-item" id="edit-button">Editar</button>
-            <button class="dropdown-item" id="delete-button">Excluir</button>
+    <!-- Modal Delete -->
+    <div class="modal micromodal-slide" id="options-modal" aria-hidden="true">
+        <div class="options_overlay" tabindex="-1" data-micromodal-close>
+            <div class="options_container" role="dialog" aria-modal="true" aria-labelledby="options_title">
+                <!-- Botão de fechar -->
+                <button type="button" class="modal__close" aria-label="Fechar modal"
+                    data-micromodal-close>&times;</button>
+
+                <!-- Conteúdo do modal -->
+                <header class="modal__header">
+                    <img src="./src/icons/settings.svg" alt="options icon">
+                    <h2 class="options_title" id="options-title">Options</h2>
+                </header>
+
+                <main class="modal__content">
+
+                    <div class="type__container">
+                        <label for="options"></label>
+                        <select id="options" class="options" disabled>
+                            <h2>Você realmente deseja realizar a exclusão do item selecionado?</h2>
+                        </select>
+                    </div>
+                </main>
+            </div>
         </div>
     </div>
 

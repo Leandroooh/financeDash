@@ -1,6 +1,6 @@
 import MicroModal from "https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.es.min.js";
 import { createHistory, renderHistory } from "./src/scripts/transactions.js";
-import { updateCards, executeUpdate } from "./src/scripts/updateCards.js";
+import { executeUpdate } from "./src/scripts/updateCards.js";
 
 let id = 0;
 const API_URL = "http://localhost:3000/transactions";
@@ -70,7 +70,7 @@ const submitPost = async () => {
 	inputmethod.value = "";
 	inputDesc.value = "";
 
-	createHistory(savedData);
+	await createHistory(savedData);
 	console.log(savedData);
 };
 
