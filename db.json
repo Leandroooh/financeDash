@@ -1,3 +1,20 @@
 {
-	"transactions": []
+  "transactions": [
+    {
+      "id": 1,
+      "date": "18/03/2025",
+      "amount": "R$ 341,34",
+      "method": "Pix",
+      "type": "Investimento",
+      "description": "431434"
+    },
+    {
+      "id": 2,
+      "date": "18/03/2025",
+      "amount": "R$ 321,32",
+      "method": "Pix",
+      "type": "Investimento",
+      "description": "3213123"
+    }
+  ]
 }

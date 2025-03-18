@@ -1,3 +1,5 @@
+const API_URL = "http://localhost:3000/transactions";
+
 const table = document.getElementById("table-body");
 
 export const createHistory = (dataInfo) => {
@@ -53,4 +55,11 @@ export const createHistory = (dataInfo) => {
 
 	tr.append(nameTd, accountTd, typeTd, dateTd, amountTd, optionsTd);
 	table.append(tr);
+};
+
+export const renderHistory = async () => {
+	const response = await fetch(API_URL);
+	const historyData = await response.json();
+
+	for (const item of historyData) createHistory(item);
 };

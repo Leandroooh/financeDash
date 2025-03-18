@@ -1,5 +1,6 @@
 import MicroModal from "https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.es.min.js";
-import { createHistory } from "./src/scripts/transactions";
+import { createHistory, renderHistory } from "./src/scripts/transactions.js";
+import { updateCards, executeUpdate } from "./src/scripts/updateCards.js";
 
 let id = 0;
 const API_URL = "http://localhost:3000/transactions";
@@ -23,13 +24,6 @@ const getDate = () => {
 	const year = today.getFullYear();
 
 	return `${day}/${month}/${year}`;
-};
-
-const renderHistory = async () => {
-	const response = await fetch(API_URL);
-	const historyData = await response.json();
-
-	for (const item of historyData) createHistory(item);
 };
 
 const submitPost = async () => {
@@ -105,43 +99,4 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 renderHistory();
-
-const updateCards = async (typeClass, investimentType) => {
-	const balance = document.getElementById(`${typeClass}-card`);
-
-	const response = await fetch(API_URL);
-	const investments = await response.json();
-
-	// Filtra os itens de "Investimento"
-	const filteredItems = investments.filter(
-		(item) => item.type === investimentType,
-	);
-
-	// Usa reduce para calcular o total
-	const totalValue = filteredItems.reduce((accum, item) => {
-		const amount = Number.parseFloat(
-			item.amount.replace("R$", "").replace(".", "").replace(",", "."),
-		);
-		return accum + amount;
-	}, 0);
-
-	let value = totalValue.toFixed(2);
-
-	value = value.replace(".", ",");
-	value = value.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
-
-	const formattedValue = `R$ ${value}`;
-	balance.textContent = formattedValue;
-};
-
-const executeUpdate = async () => {
-	try {
-		await updateCards("investiment", "Investimento"); // ID.HTML , Type.DB;
-		await updateCards("expense", "Despesas");
-		await updateCards("transfer", "Transferência");
-	} catch (error) {
-		console.error("Erro ao atualizar investimentos:", error.message);
-	}
-};
-
 executeUpdate();
