@@ -16,6 +16,7 @@
     <script type="module" src="./src/scripts/formatter.js" defer></script>
     <script type="module" src="./src/scripts/updateCards.js" defer></script>
     <script type="module" src="./src/scripts/transactions.js" defer></script>
+    <script type="module" src="./src/scripts/editAndDelete.js" defer></script>
 
 
 </head>
@@ -276,17 +277,16 @@
                     data-micromodal-close>&times;</button>
 
                 <!-- Conteúdo do modal -->
-                <!-- <header class="modal__header">
-                    <img src="./src/icons/transfer.svg" alt="options icon">
+                <header class="modal__header">
                     <h2 class="modal__title" id="modal-title">Configurações</h2>
-                </header> -->
+                </header>
 
-                <main class="option__content ">
-                    <div class="edit__container option-buttons">
+                <main class="option__content">
+                    <div class="edit__container option-buttons" id="edit-button">
                         <img src="./src/icons/income.svg" alt="delete icon">
                         <button type="button">Editar</button>
                     </div>
-                    <div class="delete__container option-buttons">
+                    <div class="delete__container option-buttons" id="delete-button">
                         <img src="./src/icons/expense.svg" alt="delete icon">
                         <button type="button">Deletar</button>
                     </div>
