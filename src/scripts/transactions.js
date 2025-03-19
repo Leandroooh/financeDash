@@ -42,7 +42,7 @@ export const createHistory = async (dataInfo) => {
 	table.append(tr);
 
 	img.addEventListener("click", () => {
-		MicroModal.show("options-modal"); // Abre o modal manualmente
+		MicroModal.show("options-modal");
 	});
 };
 
