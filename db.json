@@ -1,55 +1,7 @@
 {
   "transactions": [
     {
-      "id": "1",
-      "date": "18/03/2025",
-      "amount": "R$ 341,34",
-      "method": "Pix",
-      "type": "Investimento",
-      "description": "431434"
-    },
-    {
-      "id": "2",
-      "date": "18/03/2025",
-      "amount": "R$ 321,32",
-      "method": "Pix",
-      "type": "Investimento",
-      "description": "3213123"
-    },
-    {
-      "id": "3",
-      "date": "18/03/2025",
-      "amount": "R$ 43,24",
-      "method": "Pix",
-      "type": "Investimento",
-      "description": "Dinheiro"
-    },
-    {
-      "id": "4",
-      "date": "18/03/2025",
-      "amount": "R$ 32,13",
-      "method": "Pix",
-      "type": "Transferência",
-      "description": "32"
-    },
-    {
-      "id": "5",
-      "date": "18/03/2025",
-      "amount": "R$ 123.213.213,13",
-      "method": "Pix",
-      "type": "Transferência",
-      "description": "2313"
-    },
-    {
-      "id": "6",
-      "date": "18/03/2025",
-      "amount": "R$ 1.232,13",
-      "method": "Pix",
-      "type": "Investimento",
-      "description": "123213213"
-    },
-    {
-      "id": 7,
+      "id": "7",
       "date": "19/03/2025",
       "amount": "R$ 50.000,00",
       "method": "Pix",
@@ -57,7 +9,7 @@
       "description": "CSGO SKINS"
     },
     {
-      "id": 8,
+      "id": "8",
       "date": "19/03/2025",
       "amount": "R$ 1.500,00",
       "method": "Pix",
@@ -65,7 +17,7 @@
       "description": "Energia"
     },
     {
-      "id": 9,
+      "id": "9",
       "date": "19/03/2025",
       "amount": "R$ 2.753,44",
       "method": "Pix",
