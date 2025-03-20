@@ -22,7 +22,7 @@
 npm init -y
 ```
 
-###2️⃣ Inicie o servidor JSON
+### 2️⃣ Inicie o servidor JSON
 ```sh
 npm run json-server
 ```
